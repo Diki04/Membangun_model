@@ -18,7 +18,7 @@ def load_data(data_dir):
     y_train_df = pd.read_csv(os.path.join(data_dir, 'y_train.csv'))
     y_test_df = pd.read_csv(os.path.join(data_dir, 'y_test.csv'))
     
-    # Ambil nilai dari kolom pertama (target kita) dan ubah jadi 1D array
+    # Ambil nilai dari kolom pertama (target) dan ubah jadi 1D array
     y_train = y_train_df.iloc[:, 0].values
     y_test = y_test_df.iloc[:, 0].values
     
@@ -28,7 +28,7 @@ def train_with_tuning(X_train, y_train, X_test, y_test):
     """Melatih model dengan hyperparameter tuning dan log ke DagsHub."""
     
     # Mulai MLflow Run
-    # 'run_name' akan jadi nama eksperimen Anda di DagsHub
+    # 'run_name' akan jadi nama eksperimen di DagsHub
     with mlflow.start_run(run_name="Advanced RF Tuning (Calories)") as run:
         
         # 1. Definisikan Hyperparameter Grid untuk Tuning
@@ -38,7 +38,7 @@ def train_with_tuning(X_train, y_train, X_test, y_test):
             'min_samples_leaf': [2, 4]
         }
         
-        # Setup model (kita pakai Regressor) dan GridSearchCV
+        # Setup model dan GridSearchCV
         rf = RandomForestRegressor(random_state=42)
         grid_search = GridSearchCV(
             estimator=rf, 
@@ -56,8 +56,6 @@ def train_with_tuning(X_train, y_train, X_test, y_test):
         best_params = grid_search.best_params_
         
         print(f"Best Parameters: {best_params}")
-        
-        # === 2. MANUAL LOGGING (LEVEL ADVANCE) ===
         
         # Log Parameters
         print("Logging parameters...")
@@ -110,27 +108,15 @@ def train_with_tuning(X_train, y_train, X_test, y_test):
         
         print("\n=== Run Selesai ===")
         print(f"Run ID: {run.info.run_id}")
-        print("Cek eksperimen Anda di DagsHub!")
+        print("Cek eksperimen di DagsHub!")
 
 if __name__ == "__main__":
-    
-    # ===================================================================
-    # !! PENTING: EDIT KREDENSIAL ANDA DI BAWAH INI !!
-    # ===================================================================
-    
-    # 1. Ganti 'dikicompanyy' dengan USERNAME DagsHub Anda
-    # 2. Ganti 'Membangun_model' dengan NAMA REPO DagsHub Anda
     os.environ['MLFLOW_TRACKING_URI'] = 'https://dagshub.com/dikicompanyy/Membangun_model.mlflow'
-    
-    # 3. Ganti 'dikicompanyy' dengan USERNAME DagsHub Anda
+
     os.environ['MLFLOW_TRACKING_USERNAME'] = 'dikicompanyy'
     
-    # 4. Ganti 'TOKEN_ANDA' dengan ACCESS TOKEN DagsHub Anda
-    os.environ['MLFLOW_TRACKING_PASSWORD'] = '47f11a340d5c2142c9f6f6b3d68a9f1d913799de' # <-- BUAT TOKEN DI SETTINGS DAGSHUB
+    os.environ['MLFLOW_TRACKING_PASSWORD'] = '47f11a340d5c2142c9f6f6b3d68a9f1d913799de'
     
-    # ===================================================================
-    
-    # Path ke data Anda
     DATA_DIR = "gym_preprocessing"
     
     # Muat data
