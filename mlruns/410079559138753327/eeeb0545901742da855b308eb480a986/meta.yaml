@@ -1,0 +1,14 @@
+artifact_uri: mlflow-artifacts:/410079559138753327/eeeb0545901742da855b308eb480a986/artifacts
+end_time: 1762871784937
+entry_point_name: ''
+experiment_id: '410079559138753327'
+lifecycle_stage: active
+run_id: eeeb0545901742da855b308eb480a986
+run_name: RF_Tuning_Advanced (Calories_Burned)
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1762871674348
+status: 3
+tags: []
+user_id: ASUS

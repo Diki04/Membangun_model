@@ -24,6 +24,12 @@ os.environ['MLFLOW_TRACKING_PASSWORD'] = os.getenv('MLFLOW_TRACKING_PASSWORD')
 dagshub.init(repo_owner="dikicompanyy", repo_name="Membangun_model", mlflow=True)
 print("✅ Koneksi MLflow & DagsHub berhasil diinisialisasi.")
 
+
+# NYALAKAN KODE LOKAL (Buka comment untuk menjalankan lokal dan comment seluruh kode di atas yaitu kode dagshub)
+# mlflow.set_tracking_uri("http://127.0.0.1:5000")
+# mlflow.set_experiment("Latihan Gym Lokal (Tuning Manual)") 
+# print("✅ Koneksi MLflow diatur ke LOKAL (http://127.0.0.1:5000)")
+
 # Load dataset (Termasuk One-Hot Encoding)
 
 def load_and_split_data(data_path, target_col="Calories_Burned", test_size=0.2):

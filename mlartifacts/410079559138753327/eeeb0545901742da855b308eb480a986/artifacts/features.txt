@@ -1,0 +1,25 @@
+Age
+Gender
+Weight (kg)
+Height (m)
+Max_BPM
+Avg_BPM
+Resting_BPM
+Session_Duration (hours)
+Workout_Type
+Fat_Percentage
+Water_Intake (liters)
+Workout_Frequency (days/week)
+Experience_Level
+BMI
+Calories_Level
+Age_Group_35-44
+Age_Group_45-54
+Age_Group_55-64
+Age_Group_Under 25
+BMI_Category_Obese
+BMI_Category_Overweight
+BMI_Category_Underweight
+Fat_Category_Fit
+Fat_Category_High Fat
+Fat_Category_Lean
