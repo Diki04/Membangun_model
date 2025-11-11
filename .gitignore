@@ -5,7 +5,7 @@ venv/
 *.DS_Store
 
 # MLflow local tracking 
-mlruns/
+
 .mlflow-props
 
 .env

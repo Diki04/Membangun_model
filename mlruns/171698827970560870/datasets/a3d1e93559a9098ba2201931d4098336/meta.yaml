@@ -1,0 +1,26 @@
+digest: d127906c
+name: dataset
+profile: '{"num_rows": 778, "num_elements": 19450}'
+schema: '{"mlflow_colspec": [{"type": "double", "name": "Age", "required": true},
+  {"type": "long", "name": "Gender", "required": true}, {"type": "double", "name":
+  "Weight (kg)", "required": true}, {"type": "double", "name": "Height (m)", "required":
+  true}, {"type": "double", "name": "Max_BPM", "required": true}, {"type": "double",
+  "name": "Avg_BPM", "required": true}, {"type": "double", "name": "Resting_BPM",
+  "required": true}, {"type": "double", "name": "Session_Duration (hours)", "required":
+  true}, {"type": "long", "name": "Workout_Type", "required": true}, {"type": "double",
+  "name": "Fat_Percentage", "required": true}, {"type": "double", "name": "Water_Intake
+  (liters)", "required": true}, {"type": "double", "name": "Workout_Frequency (days/week)",
+  "required": true}, {"type": "long", "name": "Experience_Level", "required": true},
+  {"type": "double", "name": "BMI", "required": true}, {"type": "double", "name":
+  "Calories_Level", "required": true}, {"type": "boolean", "name": "Age_Group_35-44",
+  "required": true}, {"type": "boolean", "name": "Age_Group_45-54", "required": true},
+  {"type": "boolean", "name": "Age_Group_55-64", "required": true}, {"type": "boolean",
+  "name": "Age_Group_Under 25", "required": true}, {"type": "boolean", "name": "BMI_Category_Obese",
+  "required": true}, {"type": "boolean", "name": "BMI_Category_Overweight", "required":
+  true}, {"type": "boolean", "name": "BMI_Category_Underweight", "required": true},
+  {"type": "boolean", "name": "Fat_Category_Fit", "required": true}, {"type": "boolean",
+  "name": "Fat_Category_High Fat", "required": true}, {"type": "boolean", "name":
+  "Fat_Category_Lean", "required": true}]}'
+source: '{"tags": {"mlflow.user": "ASUS", "mlflow.source.name": "modelling.py", "mlflow.source.type":
+  "LOCAL", "mlflow.source.git.commit": "0e33762fb9a1323e131f0f623c37c22dc1f149ca"}}'
+source_type: code
