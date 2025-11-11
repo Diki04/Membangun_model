@@ -26,9 +26,9 @@ print("✅ Koneksi MLflow & DagsHub berhasil diinisialisasi.")
 
 
 # NYALAKAN KODE LOKAL (Buka comment untuk menjalankan lokal dan comment seluruh kode di atas yaitu kode dagshub)
-# mlflow.set_tracking_uri("http://127.0.0.1:5000")
-# mlflow.set_experiment("Latihan Gym Lokal (Tuning Manual)") 
-# print("✅ Koneksi MLflow diatur ke LOKAL (http://127.0.0.1:5000)")
+mlflow.set_tracking_uri("http://127.0.0.1:5000")
+mlflow.set_experiment("Latihan Gym Lokal (Tuning Manual)") 
+print("✅ Koneksi MLflow diatur ke LOKAL (http://127.0.0.1:5000)")
 
 # Load dataset (Termasuk One-Hot Encoding)
 
