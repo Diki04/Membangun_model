@@ -4,6 +4,10 @@ __pycache__/
 venv/
 *.DS_Store
 
-# MLflow local tracking (agar tidak ter-upload)
+# MLflow local tracking 
 mlruns/
 .mlflow-props
+
+.env
+
+.git

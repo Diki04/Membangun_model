@@ -1,0 +1,47 @@
+artifact_path: mlflow-artifacts:/171698827970560870/models/m-968fd68c54c14628a99119d59b608aab/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.7
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+is_signature_from_type_hint: false
+mlflow_version: 3.6.0
+model_id: m-968fd68c54c14628a99119d59b608aab
+model_size_bytes: 4985891
+model_uuid: m-968fd68c54c14628a99119d59b608aab
+prompts: null
+run_id: fbc73d2045a045f2abbe45c5db846a21
+signature:
+  inputs: '[{"type": "double", "name": "Age", "required": true}, {"type": "long",
+    "name": "Gender", "required": true}, {"type": "double", "name": "Weight (kg)",
+    "required": true}, {"type": "double", "name": "Height (m)", "required": true},
+    {"type": "double", "name": "Max_BPM", "required": true}, {"type": "double", "name":
+    "Avg_BPM", "required": true}, {"type": "double", "name": "Resting_BPM", "required":
+    true}, {"type": "double", "name": "Session_Duration (hours)", "required": true},
+    {"type": "long", "name": "Workout_Type", "required": true}, {"type": "double",
+    "name": "Fat_Percentage", "required": true}, {"type": "double", "name": "Water_Intake
+    (liters)", "required": true}, {"type": "double", "name": "Workout_Frequency (days/week)",
+    "required": true}, {"type": "long", "name": "Experience_Level", "required": true},
+    {"type": "double", "name": "BMI", "required": true}, {"type": "double", "name":
+    "Calories_Level", "required": true}, {"type": "boolean", "name": "Age_Group_35-44",
+    "required": true}, {"type": "boolean", "name": "Age_Group_45-54", "required":
+    true}, {"type": "boolean", "name": "Age_Group_55-64", "required": true}, {"type":
+    "boolean", "name": "Age_Group_Under 25", "required": true}, {"type": "boolean",
+    "name": "BMI_Category_Obese", "required": true}, {"type": "boolean", "name": "BMI_Category_Overweight",
+    "required": true}, {"type": "boolean", "name": "BMI_Category_Underweight", "required":
+    true}, {"type": "boolean", "name": "Fat_Category_Fit", "required": true}, {"type":
+    "boolean", "name": "Fat_Category_High Fat", "required": true}, {"type": "boolean",
+    "name": "Fat_Category_Lean", "required": true}]'
+  outputs: '[{"type": "tensor", "tensor-spec": {"dtype": "float64", "shape": [-1]}}]'
+  params: null
+type_hint_from_example: false
+utc_time_created: '2025-11-11 14:02:19.511333'
