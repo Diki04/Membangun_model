@@ -2,5 +2,7 @@
     "r2_score": 0.9584239558310261,
     "mean_absolute_error": 39.52590324044372,
     "mean_squared_error": 3553.4422724710566,
-    "root_mean_squared_error": 59.61075634875854
+    "root_mean_squared_error": 59.61075634875854,
+    "mean_absolute_percentage_error": 4.175952678674764,
+    "adjusted_r2_score": 0.8934613868170045
 }

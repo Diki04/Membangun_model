@@ -111,13 +111,17 @@ def train_with_tuning(X_train, y_train, X_test, y_test, feature_names):
         mae = mean_absolute_error(y_test, y_pred)
         mse = mean_squared_error(y_test, y_pred)
         rmse = np.sqrt(mse)
+        mape = np.mean(np.abs((y_test - y_pred) / y_test)) * 100
+        r2_adjusted = 1 - (1 - r2) * (len(y_test) - 1) / (len(y_test) - X_test.shape[1] - 1)
         
         # Membuat dictionary metrik untuk 'metric_info.json'
         metrics = {
             "r2_score": r2,
             "mean_absolute_error": mae,
             "mean_squared_error": mse,
-            "root_mean_squared_error": rmse
+            "root_mean_squared_error": rmse,
+            "mean_absolute_percentage_error": mape,
+            "adjusted_r2_score": r2_adjusted
         }
         print(f"📈 R2: {r2:.4f} | MAE: {mae:.4f} | RMSE: {rmse:.4f}")
 
